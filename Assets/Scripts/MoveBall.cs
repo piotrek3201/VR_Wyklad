@@ -6,11 +6,13 @@ public class MoveBall : MonoBehaviour
 {
     // Start is called before the first frame update
     private Rigidbody rigidBody;
-    [SerializeField] Vector3 myVector;
+    [SerializeField] float speed = 2000.0f;
+    private Vector3 myVector;
     void Start()
     {
+        speed *= Time.deltaTime;
         rigidBody = GetComponent<Rigidbody>();
-        //myVector = new Vector3(10.0f, 0.0f, 10.0f);
+        myVector = new Vector3(speed, 0.0f, speed);
     }
 
     // Update is called once per frame  
