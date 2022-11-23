@@ -19,6 +19,5 @@ public class MoveCat : MonoBehaviour
     {
         transform.Translate(movement * Time.deltaTime);
         //transform.Rotate(movement * Time.deltaTime);
-        
     }
 }
